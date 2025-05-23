@@ -1,0 +1,225 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(/asset/background.jpeg);
+    color: #333;
+    animation: pageEnter 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
+
+    nav {
+        display: none; /* Hide nav by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #34495e;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    nav.show {
+        display: flex; /* Show nav when toggled */
+    }
+}
+
+
+h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2.5rem; /* Larger font size for the main title */
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+    padding: 0.5rem;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* ===== MEMBERSHIP INVITATION ===== */
+.membership-invitation {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 8px; /* Added border radius for a softer look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.membership-invitation h2 {
+    margin-bottom: 20px;
+}
+
+.membership-invitation p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for hover effect */
+}
+
+.btn:hover {
+    background-color: #2c3e50;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* ===== CURRENT PROMOTIONS ===== */
+.current-promotions {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 2rem auto; /* Center the section */
+    width: 520px; /* Set a fixed width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.3s;
+    padding: 50px 20px; /* Adjust padding */
+    text-align: center; /* Center text */
+}
+
+.current-promotions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove margin for the ul */
+}
+
+.current-promotions li {
+    margin: 20px 0;
+    background-color: #f1f1f1; /* Light background for list items */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.current-promotions li:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.current-promotions h4 {
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes pageEnter {
+    0% {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body {
+    animation: pageEnter 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
