@@ -116,7 +116,7 @@ nav ul li a:hover {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background-image: url('/asset/herosection.jpg');
+    background-image: url('herosection.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px 20px;
